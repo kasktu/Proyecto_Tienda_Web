@@ -1,0 +1,14 @@
+#footer{
+    width: 100%;
+    height: 90px;  
+    float:left;
+    margin-top:4px;
+    border: 2px solid black;
+    font-family:Comic Sans MS;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 10px;
+    background-image:url("https://media.istockphoto.com/photos/cloud-computing-technology-and-online-data-storage-for-global-data-picture-id1276589367");
+    background-size: 30rem;
+}
+

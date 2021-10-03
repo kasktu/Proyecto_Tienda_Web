@@ -1,0 +1,83 @@
+body{
+	margin:0;
+	padding:0;
+	background:url(../img/Fondo-degradado.jpg) no-repeat center top;
+	background-size: cover;
+	font-family: sams-serif;
+	height:100vh;
+}
+.login{
+	width: 400px;
+	height: 450px;
+	background: url(../img/Fondo-degradado.jpg)no-repeat center top;
+	color: #fff;
+	top: 20%;
+	left:40%;
+	position: absolute;
+	transform: translate (-50%, -50%);
+	box-sizing: border-box;
+	padding: 30px 70px; 
+}
+.login .icono{
+	width:150px;
+	height:150px;
+	border-radius: 50%;
+	position: absolute;
+	top: -50px;
+	left: calc(50% - 50px);
+}
+.login h1{
+	margin:0;
+	padding:0;
+	text-aling: center;
+	font-size: 50px; 
+	color: #000;
+}
+.form-group label{
+	margin:0;
+	padding:0;
+	font-weight: bold;
+	display:block;
+	color: #000;
+	font-size: 20px;
+}
+.form-group1 label{
+	margin:0;
+	padding:0;
+	font-weight: bold;
+	display:block;
+	color: #000;
+	font-size: 20px;
+}
+.login input{
+	width:100%;
+	margin-bottom:20px;
+}
+.login input[type="text"],
+.login input[type="password"]{
+	border: none;
+	border-bottom: 2px solid #000;
+	background:transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+}
+.login input[type="submit"]{
+	border:none;
+	outline:none;
+	height:30px;
+	width: 120px;
+	color: #000;
+	font-size: 18px;
+	border-radius: 120px;
+}
+.login a{
+	text-decoration:none;
+	font-size: 16px;
+	line-height: 20px;
+	color:#fff;
+}
+.login a:hover{
+	color:#000;
+}
