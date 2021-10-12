@@ -29,17 +29,17 @@
 		
 				
 				<tr><td><label for = "codigo_producto">Codigo producto</label></td></tr>
-				<tr><td><input type="text" name="codigo_producto"/></td></tr>
+				<tr><td><input type="number" name="codigo_producto"/></td></tr>
 				<tr><td><label for = "nombre_producto">Nombre producto</label></td></tr>
 				<tr><td><input type="text" name="nombre_producto"/></td></tr>  
 				<tr><td><label for = "ivacompra">IVA Producto</label></td></tr>
-				<tr><td><input type="text" name="ivacompra"/></td></tr>  
+				<tr><td><input type="number" name="ivacompra"/></td></tr>  
 				<tr><td><label for = "nitproveedor">NIT Proveedor</label></td></tr>
-				<tr><td><input type="text" name="nitproveedor"/></td></tr>  
+				<tr><td><input type="number" name="nitproveedor"/></td></tr>  
 				<tr><td><label for = "precio_de_compra">Precio de compra</label></td></tr>
-				<tr><td><input type="text" name="precio_de_compra"/></td></tr>  
+				<tr><td><input type="number" name="precio_de_compra"/></td></tr>  
 				<tr><td><label for = "precio_venta">Precio de venta</label></td></tr>
-				<tr><td><input type="text" name="precio_venta"//></td></tr>    
+				<tr><td><input type="number" name="precio_venta"//></td></tr>    
 				<tr><td colspan="2"><input type="submit" value="Agregar"/></td></tr>     
  
  			</table>
