@@ -1,6 +1,7 @@
 package controlador;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,44 +11,29 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import entidad.Login;
-import modelo.ModeloLogin;
+import modelo.LoginDao;
 
-@WebServlet("/usuario")
-public class Servletlogin extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+@WebServlet("/Login")
+public class ServletLogin extends HttpServlet {
 
-	protected void service(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		String tipo = request.getParameter("tipo");
-		
-		if ("iniciarSesion".equals(tipo)) {
-			this.iniciarSesion(request, response);
-		} else if ("cerrarSesion".equals(tipo)) {
-			this.cerrarSesion(request, response);
-		}
-	}
-	
-	private void iniciarSesion(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String nombre = request.getParameter("nombre");
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String nombre_usuario = request.getParameter("nombre");
 		String clave = request.getParameter("clave");
 
-		ModeloLogin modelo = new ModeloLogin();
-		Login login = modelo.iniciarSesion(nombre, clave);
-
+		LoginDao modelo = new LoginDao();
+		Login login = modelo.iniciarSesion(nombre_usuario, clave);
+		PrintWriter out = response.getWriter();
+		
 		if (login == null) {
-			request.setAttribute("mensaje", "Error nombre de usuario y/o clave");
-			request.getRequestDispatcher("index.jsp").forward(request, response);
-		} else {
+			HttpSession sesion = request.getSession();
+			out.println("<html><head></head><body onload=\"alert('Ingreso Correcto'); window.location='index.jsp' \"></body></html>");
+			System.out.println("sin datos");
+			response.sendRedirect("index.jsp");
+		}else{
 			HttpSession sesion = request.getSession();
 			sesion.setAttribute("usuario", login);
-			response.sendRedirect("principal.jsp");
+			response.sendRedirect("vistas_usuarios/index_usuarios.jsp");
 		}
 	}
-	
-	private void cerrarSesion(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession sesion = request.getSession();
-		sesion.invalidate();
-		request.setAttribute("mensaje", "Iniciar sesión");
-		request.getRequestDispatcher("index.jsp").forward(request, response);
-	}
+
 }

@@ -1,10 +1,10 @@
 package entidad;
 
-public class Login 
+public class Login
 {
 	private int idUsuario;
-	private String nombre;
-	private String clave;
+	private String nombre_usuario;
+	private String password;
 
 	public int getIdUsuario() {
 		return idUsuario;
@@ -15,19 +15,28 @@ public class Login
 	}
 
 	public String getNombre() {
-		return nombre;
+		return getNombre_usuario();
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setNombre(String nombre_usuario) {
+		this.setNombre_usuario(nombre_usuario);
 	}
 
 	public String getClave() {
-		return clave;
+		return password;
 	}
 
-	public void setClave(String clave) {
-		this.clave = clave;
+	public void setClave(String password) {
+		this.password = password;
+	}
+
+	public String getNombre_usuario() {
+		return nombre_usuario;
+	}
+
+	public void setNombre_usuario(String nombre_usuario) {
+		this.nombre_usuario = nombre_usuario;
 	}
 
 }
+

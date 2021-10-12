@@ -1,14 +1,38 @@
-#footer{
-    width: 100%;
-    height: 90px;  
-    float:left;
-    margin-top:4px;
-    border: 2px solid black;
-    font-family:Comic Sans MS;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 10px;
-    background-image:url("https://media.istockphoto.com/photos/cloud-computing-technology-and-online-data-storage-for-global-data-picture-id1276589367");
-    background-size: 30rem;
+#alertLogin {
+	margin-top: 10px;
 }
 
+.form-container {
+    transform: translate(-10%, 10%);
+    left: 40%;
+    position: absolute;
+    width: 60%;
+    padding: 2px;
+    background: #eee;
+    max-width: 500px;
+}
+
+.form-control {
+    height: 50px;
+    margin: 0;
+    padding: 0 20px;
+    vertical-align: middle;
+    background: #f8f8f8;
+    border: 3px solid #ddd;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 50px;
+    color: #888;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -o-transition: all .3s;
+    -moz-transition: all .3s;
+    -webkit-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+}

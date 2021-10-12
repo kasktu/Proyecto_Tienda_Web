@@ -1,31 +1,36 @@
 package conexion;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class Conexion {
+public class Conexion 
+{
+	private static final String CONTROLADOR = "com.mysql.cj.jdbc.Driver";
+    private static final String URL = "jdbc:mysql://localhost:3306/bd_tienda";
+    private static final String USUARIO = "usuario";
+    private static final String CLAVE = "usuario123";
 
-	 private static final String DB_DRIVER = "com.mysql.cj.jdbc.Driver";
-	 private static final String DB_CONNECTION = "jdbc:mysql://localhost:3306/bd_tiendagenerica";
-	 private static final String DB_USER = "root";
-	 private static final String DB_PASSWORD = "ESgb2001a08";
-	 private static Connection dbConnection = null;
+    static {
+        try {
+            Class.forName(CONTROLADOR);
+        } catch (ClassNotFoundException e) {
+            System.out.println("Error al cargar el controlador");
+            e.printStackTrace();
+        }
+    }
+    
+    public static Connection getConexion() {
+        Connection conexion = null;
+        
+        try {
+            conexion = DriverManager.getConnection(URL, USUARIO, CLAVE);
+            System.out.println("Conexion establecida");
 
-	 public static Connection getConexion() {
-	  try {
-	   Class.forName(DB_DRIVER);
-	  } catch (ClassNotFoundException e) {
-	   System.out.println(e.getMessage());
-	  }
-	  try {
-	   dbConnection = DriverManager.getConnection(DB_CONNECTION, DB_USER, DB_PASSWORD);
-	  } catch (SQLException e) {
-	   System.out.println(e.getMessage());
-	  }
-
-	  return dbConnection;
-
-	 }
-
-	}
+        } catch (SQLException e) {
+            System.out.println("Error en la conexion");
+            e.printStackTrace();
+        }
+        
+        return conexion;
+    }
+}
