@@ -6,16 +6,16 @@ La base de datos tendra que estar en el puerto 3306
 
 Pasos para una conexion exitosa:
 
-1.Crear una Schema con el siguiente nombre:
+1. Crear una Schema con el siguiente nombre:
 
 "bd_tienda"
 
-2.Crear un usuario "localhost" en la base de datos con los siguientes datos:
+2. Crear un usuario "localhost" en la base de datos con los siguientes datos:
 
 USUARIO = "usuario"
 PASSWORD = "usuario123"
 
-3.Crear las tablas con con los scripts de la carpeta "SCRIPTS SQL" 
+3. Crear las tablas con con los scripts de la carpeta "SCRIPTS SQL" 
 que esta anexados en proyecto
 
 4. Verificar q se tenga conexion con la BD
