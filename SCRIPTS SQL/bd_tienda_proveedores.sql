@@ -24,10 +24,10 @@ DROP TABLE IF EXISTS `proveedores`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `proveedores` (
   `nitproveedor` bigint NOT NULL,
-  `ciudad_proveedor` varchar(255) DEFAULT NULL,
-  `direccion_proveedor` varchar(255) DEFAULT NULL,
-  `nombre_proveedor` varchar(255) DEFAULT NULL,
-  `telefono_proveedor` varchar(255) DEFAULT NULL,
+  `ciudad_proveedor` varchar(255) NOT NULL,
+  `direccion_proveedor` varchar(255) NOT NULL,
+  `nombre_proveedor` varchar(255) NOT NULL,
+  `telefono_proveedor` varchar(255) NOT NULL,
   PRIMARY KEY (`nitproveedor`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -38,7 +38,7 @@ CREATE TABLE `proveedores` (
 
 LOCK TABLES `proveedores` WRITE;
 /*!40000 ALTER TABLE `proveedores` DISABLE KEYS */;
-INSERT INTO `proveedores` VALUES (12234,'Bogota DC','av sur','Freddy Guarin','593020');
+INSERT INTO `proveedores` VALUES (45247,'cucuta','agvsdasd','Fabian','5454645');
 /*!40000 ALTER TABLE `proveedores` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-09 19:42:00
+-- Dump completed on 2021-10-15 19:18:08

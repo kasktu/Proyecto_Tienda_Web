@@ -3,6 +3,7 @@ import java.sql.*;
 import java.util.ArrayList;  
 import java.util.List;
 
+
 import entidad.Producto;  
 public class ProductoDao {  
   
@@ -109,4 +110,43 @@ public static Producto getRecordById(int codigo_producto){
     }catch(Exception e){System.out.println(e);}  
     return u;  
 }  
+
+
+//private void cargarProducto(HttpServletRequest request, HttpServletResponse response)
+//	    throws SQLException, IOException, ServletException{
+//	    	Part filePart = request.getPart("fileCSV"); 
+//	        InputStream fileContent = filePart.getInputStream();
+//	        
+//	        Reader in = new InputStreamReader(fileContent);
+//	        
+//	        CSVReader reader;
+//	        
+//	        String[] fila = null;
+//	        try {
+//	        	reader = new CSVReader(new InputStreamReader(fileContent));
+//	        
+//	        	while((fila = reader.readNext()) != null) {
+//	        		String a = fila[0];
+//	        		String b = fila[1];
+//	        		String c = fila[2];
+//	        		String d = fila[3];
+//	        		String e = fila[4];
+//	        		String f = fila[5];
+//	        		int codigo_producto = Integer.valueOf(a);
+//	        		String nombre_producto = b;
+//	        		int nitproveedor = Integer.valueOf(c);
+//	        		int precio_compra = Integer.valueOf(d);
+//	        		int ivacompra = Integer.valueOf(e);
+//	        		int precio_venta = Integer.valueOf(f);
+//	        		System.out.println(codigo_producto +" "+ nombre_producto +" "+ nitproveedor +" "+ precio_compra +" "+ ivacompra +" "+ precio_venta);
+//	        		//Producto newProducto = new Producto(codigo_producto, nombre_producto, nitproveedor, precio_compra, ivacompra, precio_venta);
+//	        		//ProductoDAO.crearProducto(newProducto);	
+//	        	}
+//	        	RequestDispatcher dispatcher = request.getRequestDispatcher("productos-list.jsp");
+//	            dispatcher.forward(request, response);
+//	        } catch(Exception e) {
+//	        	System.out.println(e);
+//	        }
+//	        in.close();
+//		}
 }  

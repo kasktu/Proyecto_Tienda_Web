@@ -16,33 +16,35 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `productos`
+-- Table structure for table `ventas`
 --
 
-DROP TABLE IF EXISTS `productos`;
+DROP TABLE IF EXISTS `ventas`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `productos` (
-  `codigo_producto` int NOT NULL,
-  `ivacompra` double NOT NULL,
-  `nitproveedor` bigint NOT NULL,
-  `nombre_producto` varchar(255) NOT NULL,
-  `precio_compra` double NOT NULL,
-  `precio_venta` double NOT NULL,
-  PRIMARY KEY (`codigo_producto`),
-  KEY `fk_productos_proveedores_nit_proveedor_idx` (`nitproveedor`),
-  CONSTRAINT `fk_productos_proveedores_nit_proveedor` FOREIGN KEY (`nitproveedor`) REFERENCES `proveedores` (`nitproveedor`)
+CREATE TABLE `ventas` (
+  `codigo_venta` bigint NOT NULL,
+  `cedula_cliente` bigint DEFAULT NULL,
+  `cedula_usuario` bigint DEFAULT NULL,
+  `ivaventa` double DEFAULT NULL,
+  `total_venta` double DEFAULT NULL,
+  `valor_venta` double DEFAULT NULL,
+  PRIMARY KEY (`codigo_venta`),
+  KEY `fk_ventas_clientes_cedula_cliente_idx` (`cedula_cliente`),
+  KEY `fk_ventas_usuarios_cedula_usuario_idx` (`cedula_usuario`),
+  CONSTRAINT `fk_ventas_clientes_cedula_cliente` FOREIGN KEY (`cedula_cliente`) REFERENCES `clientes` (`cedula_cliente`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `fk_ventas_usuarios_cedula_usuario` FOREIGN KEY (`cedula_usuario`) REFERENCES `usuarios` (`cedula_usuario`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `productos`
+-- Dumping data for table `ventas`
 --
 
-LOCK TABLES `productos` WRITE;
-/*!40000 ALTER TABLE `productos` DISABLE KEYS */;
-INSERT INTO `productos` VALUES (131,19,45247,'gfafas',10,1424),(111041,19,45247,'Gafas',0,1424);
-/*!40000 ALTER TABLE `productos` ENABLE KEYS */;
+LOCK TABLES `ventas` WRITE;
+/*!40000 ALTER TABLE `ventas` DISABLE KEYS */;
+INSERT INTO `ventas` VALUES (1,1090502391,NULL,NULL,NULL,NULL);
+/*!40000 ALTER TABLE `ventas` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -54,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-15 19:18:07
+-- Dump completed on 2021-10-15 19:18:08

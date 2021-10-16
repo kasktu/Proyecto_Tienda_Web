@@ -15,7 +15,7 @@ import modelo.LoginDao;
 
 @WebServlet("/Login")
 public class ServletLogin extends HttpServlet {
-
+	private static final long serialVersionUID = 1L;
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String nombre_usuario = request.getParameter("nombre");
 		String clave = request.getParameter("clave");

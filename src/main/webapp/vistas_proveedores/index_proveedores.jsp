@@ -21,6 +21,8 @@
 <sidebar id="sidebar">
 <br>
 <br>
+
+
 	<div class="login">
 		<div class= "proveedores">
 		<form action="addproveedores.jsp" method="post">  

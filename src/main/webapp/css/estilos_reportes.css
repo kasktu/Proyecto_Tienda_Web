@@ -15,12 +15,6 @@
     float:left;
     margin-right: 4px;
 }
-
-.h1TittleCargar{
-	text-align: center;
-	margin:50px 0px;
-}
-
  .login{
     top: calc(10% - 75px);
     left: calc(10% - 50px);
@@ -131,23 +125,6 @@
 }
 
 
-.labelCargar{
-	margin-right: 20px;
-	font-weight:bold;
-	font-size:20px;
-}
-.btnCargar{
-	border-radius:5px;
-	border:none;
-	background: #068008;
-	padding: 7px 20px 8px;
-	color:white;
-	margin-left:40px;
-}
-.text-center{
-	margin-top: 50px;
-}
-
 ::-webkit-input-placeholder{
    color: rgba(255,255,255,0.6);
 }
@@ -164,7 +141,7 @@
     float: right;
     z-index: 0;
 }
-#tabla_productos{
+#tabla_proveedores{
    position: absolute;
     margin-right: 20px;
     margin-left: 30px;

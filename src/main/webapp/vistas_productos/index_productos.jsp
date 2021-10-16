@@ -1,4 +1,6 @@
 <%@page import="conexion.Conexion"%>
+<%@page import="modelo.ProductoDao"%>  
+
 <!DOCTYPE html>  
 <html>  
 <head>  
@@ -19,11 +21,28 @@
 </header>
 		
 <sidebar id="sidebar">
-<br>
-<br>
+
 	<div class="login">
+	
+	<div>
+	
+	<h1 class="h1TittleCargar">Cargar archivo</h1>
+		<form action="cargar_productos" method="post" enctype="multipart/form-data">
+			<label class="labelCargar">Cargue un archivo:</label>
+			<input class="btnSeleccionar" type="file" name="fileCSV">
+			<br>
+			<button class="btnCargar" name="cargar">Cargar</button>
+		</form>
+	</div>
+	
+	
 		<div class= "productos">
-		<form action="addproductos.jsp" method="post">  
+
+		<form action="addproductos.jsp" method="post"> 
+		
+
+
+<br>
 		<h1>Formulario de productos</h1><br>
 			<table> 
 		
@@ -41,11 +60,28 @@
 				<tr><td><label for = "precio_venta">Precio de venta</label></td></tr>
 				<tr><td><input type="number" name="precio_venta"//></td></tr>    
 				<tr><td colspan="2"><input type="submit" value="Agregar"/></td></tr>     
+				
+				
+			
  
  			</table>
  		</form>
  		</div>
 	</div>
+          
+          
+  <!--  <div class="container">
+	<div>
+	<h3 class="h3TittleCargar">Cargar Archivo CSV para cargar Productos</h3>
+		<form action="cargar_productos" method="post" enctype="multipart/form-data">
+			<label class="labelCargar">Cargue un archivo:</label>
+			<input class="btnSeleccionar" type="file" name="fileCSV">
+			<button class="btnCargar" name="cargar">Cargar</button>
+		</form>
+	</div> -->
+	
+	<br><br>
+          
                
 </sidebar>
 
@@ -56,7 +92,7 @@
 		
 		<br><br>
 		<h3>LISTADO DE PRODUCTOS</h3>  <br>
-		<%  
+		<%
 		List<Producto> list=ProductoDao.getAllRecords();  
 		request.setAttribute("list",list);  
 		%>  

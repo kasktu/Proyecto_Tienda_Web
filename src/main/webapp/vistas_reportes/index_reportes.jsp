@@ -1,9 +1,11 @@
 <%@page import="conexion.Conexion"%>
+<%-- <%@page import="../vistas_usuarios/viewusers.jsp"%> --%>
+
 <!DOCTYPE html>  
 <html>  
 <head>  
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" href="../css/estilos_usuarios.css">
+<link rel="stylesheet" href="../css/estilos_reportes.css">
 <link rel="stylesheet" href="../css/estilos_index.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -23,30 +25,30 @@
 <div id="registro">
 <sidebar id="sidebar"> 
        	<div class="login">						
+	
 
-			<div class= "usuario">
-				<form action="adduser.jsp" method="post">
-					<h1 style="margin-top: 30px; margin-left:-15px">Ingresar Usuario</h1><br><br>	
-									
-					<label for = "usuario">Usuario</label><br>
-					<input type="text" name="usuario"  placeholder = "Ingrese el usuario"><br><br>				
-					
-					<label for = "nombre_usuario">Nombres y apellidos</label><br>
-					<input type="text" name="nombre_usuario"   placeholder = "Ingrese el nombre completo"><br>
-					
-					<label for = "cedula_usuario">Cedula</label><br>
-					<input type="text" name="cedula_usuario"  placeholder = "Ingrese el numero de cedula"><br>
-					
-					<label for = "password">Contrasena</label><br>
-					<input type="password" name="password"  placeholder = "Ingrese la contrasena"><br>
-						
-					<label for = "email_usuario">Correo electronico</label><br>
-					<input type="email" name="email_usuario" placeholder = "Ingrese el correo electronico"><br>
 				
-						
-					<input type="submit" name="btnins" value="Registrar">
+				<br><br>
+				<br><br>
+			
+				
+				<form action="../vistas_usuarios/viewusers.jsp" method="post">
+					<input type="submit" name="btnins" value="Listado de usuarios">
 				</form>
-			</div>
+				
+				<br><br>
+				<br><br>
+				
+				<form action="../vistas_clientes/viewclientes.jsp" method="post">
+					<input type="submit" name="btnins" value="Listado de clientes">
+				</form>
+				
+				<br><br>
+				<br><br>
+				
+				<form action="../vistas_ventas/viewventas.jsp" method="post">
+					<input type="submit" name="btnins" value="Ventas por clientes">
+				</form>
 		</div>
               
    	</sidebar>
@@ -54,7 +56,7 @@
 
 <content id="content">
 
-		<%@page import="modelo.UserDao,entidad.*,java.util.*"%>  
+		<%-- <%@page import="modelo.UserDao,entidad.*,java.util.*"%>  
 		<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
 		
 		<br><br>
@@ -74,7 +76,7 @@
 		
 		<td><a href="deleteuser.jsp?cedula_usuario=${u.getCedula_usuario()}" class="btn btn-danger btn-sm">Eliminar</a></td></tr>  
 		</c:forEach>  
-		</table>
+		</table> --%>
 </content>
         
 	</div>

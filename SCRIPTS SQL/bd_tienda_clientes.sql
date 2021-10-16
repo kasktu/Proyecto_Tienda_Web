@@ -38,7 +38,7 @@ CREATE TABLE `clientes` (
 
 LOCK TABLES `clientes` WRITE;
 /*!40000 ALTER TABLE `clientes` DISABLE KEYS */;
-INSERT INTO `clientes` VALUES (1090502391,'Av 5','fabian@hotmail','Fabian Guarin','5837920');
+INSERT INTO `clientes` VALUES (4464131,'SGJASBJSB','FABIAN@JODJX','ghsgjskjg','25455'),(1090502391,'Carrera 99 # 69a - 81, Nueva Tierra Grata II, BogotÃ¡. Av 5 n # 6-64, Molinos del Norte, CÃºcuta.','fabian.guarin@hotmail.com','Fabian guarin','5926273');
 /*!40000 ALTER TABLE `clientes` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-09 19:41:59
+-- Dump completed on 2021-10-15 19:18:07

@@ -34,11 +34,11 @@
 						</li>
 						<li class="nav-item"><a
 							style="margin-left: 10px; border: none"
-							class="btn btn-outline-light" href="#">Ventas</a>
+							class="btn btn-outline-light" href="../vistas_ventas/index_ventas.jsp">Ventas</a>
 						</li>
 						<li class="nav-item"><a
 							style="margin-left: 10px; border: none"
-							class="btn btn-outline-light" href="#">Reportes</a></li>
+							class="btn btn-outline-light" href="../vistas_reportes/index_reportes.jsp">Reportes</a></li>
 				</div>
 			</div>
 		</nav>

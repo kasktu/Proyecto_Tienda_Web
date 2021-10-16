@@ -4,19 +4,17 @@ public class Producto {
 private int codigo_producto, nitproveedor;
 private double ivacompra, precio_compra,precio_venta;
 private String nombre_producto;
-
-
-public int getNitproveedor() {
-	return nitproveedor;
-}
-public void setNitproveedor(int nitproveedor) {
-	this.nitproveedor = nitproveedor;
-}
 public int getCodigo_producto() {
 	return codigo_producto;
 }
 public void setCodigo_producto(int codigo_producto) {
 	this.codigo_producto = codigo_producto;
+}
+public int getNitproveedor() {
+	return nitproveedor;
+}
+public void setNitproveedor(int nitproveedor) {
+	this.nitproveedor = nitproveedor;
 }
 public double getIvacompra() {
 	return ivacompra;
