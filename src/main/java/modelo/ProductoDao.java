@@ -89,8 +89,9 @@ public static List<Producto> getAllRecords(){
     }catch(Exception e){System.out.println(e);}  
     return list;  
 }  
-public static Producto getRecordById(int codigo_producto){  
-    Producto u=null;  
+public int consulta(Producto prod){  
+    Producto u=null; 
+    int codigo_producto=prod.getCodigo_producto();
     try{  
         Connection con=getConnection();  
         PreparedStatement ps=con.prepareStatement("select * from productos where codigo_producto=?");  
@@ -104,11 +105,13 @@ public static Producto getRecordById(int codigo_producto){
             u.setPrecio_compra(rs.getDouble("precio_compra"));  
             u.setPrecio_venta(rs.getDouble("precio_venta")); 
             u.setNombre_producto(rs.getString("nombre_producto"));  
-            u.setCodigo_producto(rs.getInt("codigo_producto"));  
+            u.setCodigo_producto(rs.getInt("codigo_producto"));
+            
             
         }  
     }catch(Exception e){System.out.println(e);}  
-    return u;  
+    int cod=u.getCodigo_producto();  
+    return cod;  
 }  
 
 

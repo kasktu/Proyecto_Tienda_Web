@@ -116,6 +116,20 @@ body{
     padding: 6px;
     margin-top: 10px;
 }
+.login input[type=email],input[type=submit]{
+	width: 250px;
+    height: 35px;
+    background: #bbb;
+    border: 1px solid #999;
+    cursor: pointer;
+    border-radius: 2px;
+    color: #333;
+    font-family: 'Exo', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 6px;
+    margin-top: 10px;
+}
 
 .login input[type=button],input[type=submit]:hover{
 	opacity: 0.8;
@@ -131,6 +145,10 @@ body{
 }
 
 .login input[type=password]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+.login input[type=email]:focus{
 	outline: none;
 	border: 1px solid rgba(255,255,255,0.9);
 }
